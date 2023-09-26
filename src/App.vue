@@ -85,7 +85,7 @@ function returnThing (thing)
       li{
         @apply bg-white text-background m-2 p-2 w-96 text-center;
         &:hover{
-          @apply bg-purplish font-bold cursor-pointer;
+          @apply duration-300 line-through text-red-500 cursor-pointer;
         }
       }
     }
