@@ -59,9 +59,9 @@ const deleteGrocery = id =>{
       }
 
       button{
-        @apply bg-accent text-background p-2 text-2xl font-bold rounded-r-md; 
+        @apply duration-300  bg-white text-background p-2 text-2xl font-bold rounded-r-md; 
         &:hover{
-          @apply bg-purplish;
+          @apply duration-300 bg-accent;
         }
       }
     }
