@@ -21,11 +21,24 @@ const deleteGrocery = id =>{
   confetti({particleCount: 1000, spread: 1000, origin: {x: 1, y: 1}, gravity: 5, drift: -5, angle: -45})
   confetti({particleCount: 1000, spread: 1000, origin: {x: 0, y: 1}, gravity: 5, drift: 5, angle: 45})
 }
+
+function returnThing (thing)
+{
+  console.log(thing.length);
+  if (thing.length > 0)
+  {
+    return thing.length;
+  }
+  else
+  {
+    return "Nothing!"
+  }
+}
 </script>
 
 <template>
   <main>    
-    <h1 class="title">📝 Vue Grocery List 📝</h1>
+    <h1 class="title">To-Do List</h1>
     <form class="newGroceryForm" @submit.prevent="addGrocery">
       <input
         id="newGrocery"
@@ -36,12 +49,13 @@ const deleteGrocery = id =>{
       />
       <button type="submit">Add</button>
     </form>
-    <h3>Pending Items: {{ groceries.length }}</h3>
+    <h3>To-Do: {{ returnThing(groceries) }}</h3>
     <ul>
       <li v-for="grocery in groceries" @click="deleteGrocery(grocery.id)">
         {{grocery.name}}
       </li>
     </ul>
+    <h3>Made with Vue</h3>
   </main>
 </template>
 
