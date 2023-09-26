@@ -83,9 +83,9 @@ function returnThing (thing)
     ul{
       @apply flex flex-col items-center justify-center rounded-lg bg-comment;
       li{
-        @apply bg-white text-background m-2 p-2 w-96 text-center;
+        @apply duration-100 bg-white text-background m-2 p-2 w-96 text-center;
         &:hover{
-          @apply duration-300 line-through text-red-500 cursor-pointer;
+          @apply duration-100 line-through text-red-500 cursor-pointer;
         }
       }
     }
