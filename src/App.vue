@@ -18,7 +18,8 @@ const addGrocery = () => {
 const deleteGrocery = id =>{
   const removeIndex = groceries.value.findIndex(grocery => grocery.id === id)
   groceries.value.splice(removeIndex, 1)
-  confetti({particleCount: 300, spread: 1000, origin: {y: 1}})
+  confetti({particleCount: 1000, spread: 1000, origin: {x: 1, y: 1}, gravity: 5, drift: -5, angle: -45})
+  confetti({particleCount: 1000, spread: 1000, origin: {x: 0, y: 1}, gravity: 5, drift: 5, angle: 45})
 }
 </script>
 
